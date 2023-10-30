@@ -14,17 +14,18 @@ sec = 0;
 min = 0;
 
 function timer() {
-  msec++;
-  msech.innerHTML = msec;
-  if (msec == 100) {
-    sec++;
-    sec++;
-    sec++;
-    sec++;
-    sech.innerHTML = sec;
-    msec = 0;
-  } else if (sec === 10) {
-    min++;
+msec++;
+
+// Update the milliseconds display
+msech.innerHTML = msec;
+
+if (msec === 100) {
+  sec += 4; // Increment seconds by 4 when msec reaches 100
+  sech.innerHTML = sec;
+  msec = 0;
+  
+  if (sec === 10) {
+    min++; // Increment minutes when seconds reach 10
     minh.innerHTML = min;
     sec = 0;
   }
