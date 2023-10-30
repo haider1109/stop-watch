@@ -44,9 +44,11 @@ function reset(){
     min=0
     min=0
     min=0
+    min1=0
+    nnsec=0
     msech.innerHTML = msec;
     sech.innerHTML = sec;
     minh.innerHTML = min;
     clearInterval(interval);
-    kchkaro.disabled = false;
+    kchkaro.disabled = true;
 }
